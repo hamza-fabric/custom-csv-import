@@ -21,7 +21,7 @@ const defaultValues = Object.freeze({
     [mainHeaders.parentSku]: null,
 });
 
-const itemSchema = { attributeValues: [], bundleItems: [] };
+const itemSchema = { attributeValues: [] };
 
 export {
     mainHeaders,

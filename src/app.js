@@ -60,6 +60,7 @@ app.post('/', uploadFile.single('file'), async (req, res) => { // api-product/v1
         const csvString = file.buffer.toString();
         const [header, ...rows] = customSanitazier(csvString);
         const items = rows.reduce(customAdapterReducer(header), []);
+        console.log(items)
         const { status, data } = await bulkInsert(items, xSiteContext);
         res.status(status).json(data);
     } catch (err) {
